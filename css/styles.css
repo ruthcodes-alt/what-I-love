@@ -646,38 +646,109 @@ body.faith-page-body {
    VISUALS PAGE STYLES 
    ========================================== */
 
-/* Main Bento Container */
-.visuals-bento-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 5rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1.8rem;
+/* ==========================================
+   PAGE-SPECIFIC FULL BACKGROUND
+   ========================================== */
+
+html.page-visuals,
+body.page-visuals {
+    background-image: none !important;
+    background-color: #f4f6f8;
+    min-height: 100vh;
+    margin: 0;
 }
 
 /* ==========================================
-   VISUAL CARDS
+   NAVIGATION BAR
    ========================================== */
+
+.main-nav {
+    background-color: #f4f6f8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #162230;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #c5a059;
+}
+
+/* ==========================================
+   CLEAN TITLE HEADER (No dark block)
+   ========================================== */
+
+.page-header {
+    text-align: center;
+    padding: 40px 2rem 10px;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.8rem;
+    color: #162230;
+    margin: 0.3rem 0 0 0;
+}
+
+/* ==========================================
+   4-GRID CARDS (Positioned right at the top)
+   ========================================== */
+
+.visuals-bento-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+}
 
 .visual-card {
     background-color: #162230;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-
     display: flex;
     flex-direction: column;
-
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-
-
-/* Large and Small Cards */
 
 .span-8 {
     grid-column: span 8;
@@ -687,20 +758,10 @@ body.faith-page-body {
     grid-column: span 4;
 }
 
-
-/* Hover Effect */
-
 .visual-card:hover {
     transform: translateY(-6px);
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
 }
-
-
-/* ==========================================
-   IMAGE
-   ========================================== */
 
 .visual-img-wrapper {
     width: 100%;
@@ -711,83 +772,118 @@ body.faith-page-body {
 .visual-img-wrapper img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
     transition: transform 0.5s ease;
 }
-
-
-/* Image zoom when hovering */
 
 .visual-card:hover .visual-img-wrapper img {
     transform: scale(1.04);
 }
 
-
-/* ==========================================
-   CARD INFORMATION
-   ========================================== */
-
 .visual-card-info {
     padding: 1.6rem 1.8rem;
 }
 
-
-/* Small Category */
-
 .visual-tag {
-    display: block;
-
+    display: inline-block;
     font-size: 0.68rem;
     font-weight: 800;
-
     letter-spacing: 2px;
-
     color: #c5a059;
-
     margin-bottom: 0.4rem;
 }
 
-
-/* Card Title */
-
 .visual-card h3 {
     font-family: 'Playfair Display', Georgia, serif;
-
     font-size: 1.4rem;
-
     color: #ffffff;
-
     margin: 0 0 0.5rem 0;
 }
 
-
-/* Card Description */
-
 .visual-card p {
     font-size: 0.88rem;
-
     line-height: 1.5;
-
     color: #a3b1c2;
-
     margin: 0;
 }
 
+/* ==========================================
+   BOTTOM MEDIUM FEATURED CARD
+   ========================================== */
+
+/* PASTE THIS NEW BLOCK */
+.visual-feature-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* 2 Vertical Cards Row */
+.vertical-cards-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.vertical-card .visual-img-wrapper {
+    height: 360px;
+}
+
+/* 1 Horizontal Split Card */
+.horizontal-split-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.horizontal-split-card .split-img-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.horizontal-split-card .split-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.horizontal-split-card:hover .split-img-wrapper img {
+    transform: scale(1.04);
+}
+
+.split-card-info {
+    padding: 2.5rem;
+}
+
+.split-card-info h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0.4rem 0 0.8rem 0;
+}
+
+.split-card-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #a3b1c2;
+    margin: 0;
+}
 
 /* ==========================================
-   TABLET
+   RESPONSIVE (Tablet & Mobile)
    ========================================== */
 
 @media (max-width: 900px) {
-
     .visuals-bento-container {
         grid-template-columns: repeat(2, 1fr);
-
-        padding: 3rem 1.5rem;
     }
 
     .span-8,
@@ -795,38 +891,51 @@ body.faith-page-body {
         grid-column: span 1;
     }
 
-}
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
 
-
-/* ==========================================
-   MOBILE
-   ========================================== */
-
-@media (max-width: 600px) {
-
-    .visuals-bento-container {
-        grid-template-columns: 1fr;
-
-        padding: 2rem 1rem;
-
+    .nav-links {
         gap: 1.2rem;
     }
 
-    .span-8,
-    .span-4 {
-        grid-column: span 1;
+    .vertical-cards-row {
+        grid-template-columns: 1fr;
+    }
+
+    .horizontal-split-card {
+        grid-template-columns: 1fr;
+    }
+
+    .horizontal-split-card .split-img-wrapper {
+        height: 240px;
+    }
+
+    .split-card-info {
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .page-header {
+        padding: 20px 1rem 0;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .visuals-bento-container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        margin-bottom: 40px;
     }
 
     .visual-img-wrapper {
         height: 250px;
     }
-
-    .visual-card-info {
-        padding: 1.3rem;
-    }
-
-    .visual-card h3 {
-        font-size: 1.2rem;
-    }
-
 }
