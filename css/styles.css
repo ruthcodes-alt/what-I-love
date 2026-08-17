@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #2b2b2b;
+}
+
+/* 2. Hero Section (Full Screen Banner) */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    color: #ffffff;
+    /* Dark gradient over background photo */
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), 
+                url('../images/hero-bg.jpg') center/cover no-repeat #2a2a2a;
+                background-position: center 0%;
+}
+
+/* 3. Navigation Header (Logo Left, Links Right) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(68, 88, 92, 0.85);
+}
+
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight:600;
+    opacity: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+
+    transition: opacity 0.3s;
+}
+
+header nav a:hover {
+    opacity: 1;
+}
+
+/* 4. Hero Center Content */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+/* Recreates the sweeping, high-fashion italics from the inspo image */
+.hero-content h1 em {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Hero Button */
+.hero-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* 5. Light Section Below Hero */
+.intro-section {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    gap: 4rem;
+}
+
+.intro-heading {
+    flex: 1;
+}
+
+.intro-heading h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+.intro-body {
+    flex: 2;
+}
+
+.lead-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.intro-details p {
+    color: #1f1e1e;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+/* Styling for the container holding the logo */
+.text-logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.text-logo:hover {
+    opacity: 0.8;
+}
+/* Site Footer */
+footer {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+footer p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    color: #666666;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* ==========================================
+   AVIATION PAGE STYLES 
+   ========================================== */
+
+/* 1. Navigation Header */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+header nav a, 
+.text-logo {
+    color: #111111 !important;
+    text-shadow: none !important;
+}
+
+header nav a.active-link {
+    border-bottom: 2px solid #111111;
+}
+
+/* 2. White Title Banner & Pill Tag */
+.page-banner {
+    padding: 5rem 2rem 2rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+.category-pill {
+    display: inline-block;
+    background-color: #4a6b7c;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    text-transform: lowercase;
+    margin-bottom: 1.2rem;
+}
+
+.page-banner h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.8rem;
+    font-weight: 600;
+    color: #111111;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.page-banner p {
+    font-size: 1.05rem;
+    color: #666666;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* 3. Interactive Hover Image Gallery */
+.interactive-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 3rem auto;
+    height: 420px;
+    padding: 0 1rem;
+    background-color: #ffffff;
+}
+
+.gallery-card {
+    position: relative;
+    flex: 1;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                height 0.5s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.3s ease;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-label {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    color: #111111;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover {
+    flex: 2.8;
+    height: 400px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card:hover .card-label {
+    opacity: 1;
+}
+
+/* 4. Text Content Section */
+.content-container {
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem 2rem;
+}
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 768px) {
+    .interactive-gallery {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 3rem auto;
+    height: 420px;
+    padding: 0 1rem;
+}
+    
+
+    .gallery-card,
+    .gallery-card:hover {
+        width: 100%;
+        height: 220px;
+        flex: none;
+    }
+
+    .card-label {
+        opacity: 1;
+    }
+}
+    /* Full-Page Background Image */
+body {
+    background-image: url('../images/sky-bg.jpeg'); /* Replace with your exact image file name */
+    background-size: cover;          /* Scales the image to cover the entire viewport */
+    background-position: center;     /* Centers the image on the screen */
+    background-repeat: no-repeat;    /* Prevents the image from repeating/tiling */
+    background-attachment: fixed;    /* Keeps the image still while the user scrolls */
+    min-height: 100vh;
+
+}
+
+/* ==========================================
+   faith PAGE STYLES 
+   ========================================== */
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+body.faith-page-body {
+    background: linear-gradient(rgba(13, 19, 26, 0.75), rgba(13, 19, 26, 0.75)), 
+                url('../images/pale-bg (3).jpg') center/cover no-repeat fixed !important;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Overlay */
+.faith-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 3.5rem;
+    z-index: 100;
+    background: transparent;
+}
+
+.faith-header .logo a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+.faith-header nav {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.faith-header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.faith-header nav a.active {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+}
+
+/* Hero Section with Pale Fixed Background Photo */
+
+.faith-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Changed from height: 100vh */
+    padding: 6rem 1rem 3rem 1rem; /* Gives space for header and scroll button */
+    overflow: visible;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+    .hero-header-text {
+    margin-top: 2rem;
+}
+
+.hero-header-text h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    z-index: 20;
+    position: relative;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* Swipable Carousel Card Container */
+.carousel-wrapper {
+    position: relative;
+    width: 85%;
+    max-width: 500px;
+    height: 420px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.slide {
+   position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Keeps the card anchored cleanly */
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Enables z-index layering */
+    z-index: 25;         /* Elevates card above triangles (z-index: 10) */
+    overflow: visible;
+}
+
+.slide-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    flex-shrink: 0;
+}
+
+.card-label {
+   margin-top: 1rem;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 0.6rem 1.6rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    white-space: nowrap; /* Prevents text wrapping */
+    position: relative;
+    z-index: 30;
+    flex-shrink: 0;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 150px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    z-index: 30;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: #c5a059;
+}
+
+.prev-btn { left: -50px; }
+.next-btn { right: -50px; }
+
+/* Scroll Down Button */
+.scroll-btn {
+    position: relative;
+    z-index: 20;
+    margin-top: 1.5rem;
+    background-color: #c5a059;
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.scroll-btn:hover {
+    background-color: #d8b268;
+    transform: translateY(-3px);
+}
+
+/* Corner Triangles */
+.triangle-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 25vh solid #c5a059;
+    border-right: 25vw solid transparent;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.triangle-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 25vh solid #c5a059;
+    border-left: 25vw solid transparent;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Bottom Gallery Section */
+.faith-gallery-section {
+    background: transparent;
+    padding: 5rem 3rem 8rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.title-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #c5a059;
+    margin: 0 auto;
+}
+
+.faith-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+}
+
+.grid-card {
+    background-color: #16202c;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.grid-card:hover {
+    transform: translateY(-6px);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1.5rem;
+}
+
+.card-info h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    color: #c5a059;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #c2c9d1;
+    margin: 0;
+}
+
+
+
+/* ==========================================
+   VISUALS PAGE STYLES 
+   ========================================== */
+
+/* Main Bento Container */
+.visuals-bento-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.8rem;
+}
+
+/* ==========================================
+   VISUAL CARDS
+   ========================================== */
+
+.visual-card {
+    background-color: #162230;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Large and Small Cards */
+
+.span-8 {
+    grid-column: span 8;
+}
+
+.span-4 {
+    grid-column: span 4;
+}
+
+
+/* Hover Effect */
+
+.visual-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ==========================================
+   IMAGE
+   ========================================== */
+
+.visual-img-wrapper {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.visual-img-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* Image zoom when hovering */
+
+.visual-card:hover .visual-img-wrapper img {
+    transform: scale(1.04);
+}
+
+
+/* ==========================================
+   CARD INFORMATION
+   ========================================== */
+
+.visual-card-info {
+    padding: 1.6rem 1.8rem;
+}
+
+
+/* Small Category */
+
+.visual-tag {
+    display: block;
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #c5a059;
+
+    margin-bottom: 0.4rem;
+}
+
+
+/* Card Title */
+
+.visual-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+
+    font-size: 1.4rem;
+
+    color: #ffffff;
+
+    margin: 0 0 0.5rem 0;
+}
+
+
+/* Card Description */
+
+.visual-card p {
+    font-size: 0.88rem;
+
+    line-height: 1.5;
+
+    color: #a3b1c2;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .visuals-bento-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 3rem 1.5rem;
+    }
+
+    .span-8,
+    .span-4 {
+        grid-column: span 1;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .visuals-bento-container {
+        grid-template-columns: 1fr;
+
+        padding: 2rem 1rem;
+
+        gap: 1.2rem;
+    }
+
+    .span-8,
+    .span-4 {
+        grid-column: span 1;
+    }
+
+    .visual-img-wrapper {
+        height: 250px;
+    }
+
+    .visual-card-info {
+        padding: 1.3rem;
+    }
+
+    .visual-card h3 {
+        font-size: 1.2rem;
+    }
+
+}

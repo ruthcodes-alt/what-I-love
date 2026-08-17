@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith & Love</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body class="faith-page-body">
+
+    <!-- Transparent Navigation Header -->
+    <header class="faith-header">
+        <div class="logo">
+            <a href="../index.html">FAITH</a>
+        </div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="aviation.html">Aviation</a>
+            <a href="faith.html" class="active">Faith</a>
+            <a href="visuals.html">Through My Lens</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Pale Background & Image Slider -->
+    <section class="faith-hero">
+        
+        <div class="hero-header-text">
+            <h1>Faith & Love</h1>
+        </div>
+
+        <!-- Centered 4-Photo Carousel -->
+        <div class="carousel-wrapper">
+            
+            <!-- PHOTO 1 -->
+            <div class="slide active">
+                <div class="slide-card">
+                    <img src="../images/orthodox-1 (2).jpg" alt="Photo 1">
+                    <div class="card-label">OLDEST ETHIOPIAN BIBLE</div>
+                </div>
+            </div>
+
+            <!-- PHOTO 2 -->
+            <div class="slide">
+                <div class="slide-card">
+                    <img src="../images/orthodox-2.jpg" alt="Photo 2">
+                    <div class="card-label">ETHIOPIAN Iconography</div>
+                </div>
+            </div>
+
+            <!-- PHOTO 3 -->
+            <div class="slide">
+                <div class="slide-card">
+                    <img src="../images/orthodox-3.jpg" alt="Photo 3">
+                    <div class="card-label"> LALIBELA MONASTRY</div>
+                </div>
+            </div>
+
+            <!-- PHOTO 4 -->
+            <div class="slide">
+                <div class="slide-card">
+                    <img src="../images/orthodox-4.jpg" alt="Photo 4">
+                    <div class="card-label">MESKEL HOLIDAY</div>
+                </div>
+            </div>
+
+            <!-- Slider Arrows -->
+            <button class="arrow prev-btn" onclick="moveSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+            <button class="arrow next-btn" onclick="moveSlide(1)" aria-label="Next Slide">&#10095;</button>
+
+        </div>
+
+        <!-- Scroll Down Button -->
+        <a href="#gallery-section" class="scroll-btn">EXPLORE GALLERY &darr;</a>
+
+        <!-- Side Corner Overlays -->
+        <div class="triangle-left"></div>
+        <div class="triangle-right"></div>
+
+    </section>
+
+    <!-- Bottom Section: Image Grid with Descriptions -->
+    <section id="gallery-section" class="faith-gallery-section">
+        <div class="section-title">
+            <h2>key Destinations</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="faith-grid">
+            
+            <!-- Grid Card 1 -->
+            <div class="grid-card">
+                <div class="img-wrapper">
+                    <img src="../images/faith-grid-1.jpg" alt="LALIBELA'S ROCK HEWN CHURCH">
+                </div>
+                <div class="card-info">
+                    <h3>LALIBELA'S ROCK HEWN CHURCH</h3>
+                    <p>A sacred city of stone, built in the 12th century by King Lalibela, who carved its magnificent churches directly into the rock as a symbol of faith and devotion. ✝️🪨.</p>
+                </div>
+            </div>
+
+            <!-- Grid Card 2 -->
+            <div class="grid-card">
+                <div class="img-wrapper">
+                    <img src="../images/faith-grid-2.jpg" alt="JERUSALEM">
+                </div>
+                <div class="card-info">
+                    <h3>JERUSALEM</h3>
+                    <p>THE HOLY LAND AND THE LIFE OF JESUS.</p>
+                </div>
+            </div>
+
+            <!-- Grid Card 3 -->
+            <div class="grid-card">
+                <div class="img-wrapper">
+                    <img src="../images/faith-grid-3.jpg" alt="MAMERTINE PRISON">
+                </div>
+                <div class="card-info">
+                    <h3>MAMERTINE PRISON</h3>
+                </div>
+                    <p>SAINT PAUL AND SAINT PETER IMPRISONMENT.</p>
+                </div>
+            </div>
+
+            <!-- Grid Card 4 -->
+            <div class="grid-card">
+                <div class="img-wrapper">
+                    <img src="../images/faith-grid-4.jpg" alt="GARDEN OF GETHSEMANE">
+                </div>
+                <div class="card-info">
+                    <h3>GARDEN OF GETHSEMANE</h3>
+                    <p>Finding stillness, reflection, and spiritual groundedness in MOUNT OF OLIVES.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Slider Logic JavaScript -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) slide.classList.add('active');
+            });
+        }
+
+        function moveSlide(step) {
+            currentSlide = (currentSlide + step + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000);
+    </script>
+</body>
+</html>
